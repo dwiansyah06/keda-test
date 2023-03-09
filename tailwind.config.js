@@ -5,7 +5,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'primary': '#00c1f5',
+        'secondary' : '#0092bb'
+      },
+      fontFamily: {
+        jost: ['Jost', 'sans-serif'],
+      },
+    },
     screens: {
       'mobile' : {'min': '10px', 'max': '767px'},
       'small-mobile' : {'min': '10px', 'max': '400px'},

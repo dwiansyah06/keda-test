@@ -5,7 +5,6 @@ import { pagesContext } from '../../config/context/pagesContext';
 
 const LayoutHeader = () => {
 
-    const [color, setColor] = useState('#ffffff')
     const [isScroll, setIsScroll] = useState(false)
     const context = useContext(pagesContext);
 
@@ -25,11 +24,9 @@ const LayoutHeader = () => {
     
     useEffect(() => {
         function updatePosition() {
-            if(window.scrollY >= 100) {
-                setColor('#00c1f5')
+            if(window.scrollY >= 25) {
                 setIsScroll(true)
             } else {
-                setColor('#ffffff')
                 setIsScroll(false)
             }
         }
@@ -42,22 +39,30 @@ const LayoutHeader = () => {
     
     return (
         <>
-            <div style={{ color: color }} className={`container-fluid py-4 flex justify-between items-center uppercase text-sm font-bold sticky top-0 w-full z-50 ${isScroll ? 'border-b-[1px] border-[#00c1f5] backdrop-blur-md bg-white/70' : 'bg-[#00c1f5]'}`}>
-                <h3 className='flex space-x-2 items-center cursor-pointer'><CgDribbble className='text-xl'/> <label>Lorem</label></h3>
+            <div className={`container-fluid py-4 text-white flex justify-between items-center uppercase text-sm font-medium sticky top-0 w-full z-50 ${isScroll ? 'bg-resp' : 'bg-[#00c1f5]'} transition-all duration-300 font-jost`}>
+                <h3 className='flex space-x-2 items-center cursor-pointer'><CgDribbble className='text-xl'/> <label className='cursor-pointer'>Lorem</label></h3>
                 <AiOutlineMenu onClick={showSidebar} className='hidden mobile:block text-2xl cursor-pointer' />
                 <div className='flex space-x-4 items-center mobile:hidden'>
-                    <h3>Home</h3>
-                    <h3>About</h3>
-                    <h3>Pricing</h3>
-                    <h3>Contact</h3>
-                    <button className={`uppercase bg-white ${isScroll ? 'border-[1px] border-[#00c1f5] hover:bg-[#00c1f5] hover:text-white' : 'text-[#00c1f5] border-[1px] border-white'} px-10 py-2 rounded-md font-bold text-sm`}>Login</button>
+                    <h3 className='cursor-pointer'>Home</h3>
+                    <h3 className='cursor-pointer'>About</h3>
+                    <h3 className='cursor-pointer'>Pricing</h3>
+                    <h3 className='cursor-pointer'>Contact</h3>
+                    <button className={`uppercase border-2 border-white text-white hover:bg-white hover:text-[#00c1f5] px-10 py-2 rounded-[50px] font-medium text-sm transition-all duration-300`}>Login</button>
                 </div>
             </div>
             
+            {/* RESPONSIVE SIDEBAR */}
             <div className={`fixed bg-[#00c1f5] w-3/5 right-0 top-0 h-full z-[52] p-4 ${context.isClickMenu ? 'translate-x-0' : 'translate-x-full'} transition-all ease-in-out duration-300`}>
                 <div className='header-sidebar'>
                     <h3><CgDribbble className='text-xl'/> <label>Lorem</label></h3>
                     <AiFillCloseCircle onClick={closeSidebar} className='text-xl text-white' />
+                </div>
+                <div className='content-sidebar'>
+                    <h3>Home</h3>
+                    <h3>About</h3>
+                    <h3>Pricing</h3>
+                    <h3>Contact</h3>
+                    <button>Login</button>
                 </div>
             </div>
             {context.isShowOpacity && <div className='fixed bg-black bg-opacity-50 top-0 left-0 w-full h-full z-[51]'></div>}

@@ -1,15 +1,104 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .container-fluid {
     @apply px-8
 }
 
 .header-sidebar {
-    @apply flex justify-between items-center border-b-[1px] border-white pb-3
+    @apply flex justify-between items-center border-b-[1px] border-white pb-3 font-jost
 }
 
 .header-sidebar h3{
-    @apply flex space-x-2 items-center cursor-pointer text-white font-bold uppercase
+    @apply flex space-x-2 items-center cursor-pointer text-white font-medium uppercase
+}
+
+.content-sidebar {
+    @apply flex flex-col space-y-3 mt-3
+}
+
+.content-sidebar h3{
+    @apply font-medium uppercase text-white font-jost text-sm
+}
+
+.content-sidebar button{
+    @apply uppercase text-white border-2 border-white px-10 py-2 rounded-[50px] font-medium font-jost text-sm hover:bg-white hover:text-primary
+}
+
+.title-section h3{
+    @apply uppercase text-[32px] font-bold text-[#00c1f5] text-center relative pb-5 mb-16 font-jost
+}
+
+.title-section h3::before{
+    @apply content-[''] absolute block w-[120px] h-[1px] bg-[#ddd] bottom-[1px] left-[calc(50%-60px)]
+}
+
+.title-section h3::after{
+    @apply content-[''] absolute block w-[40px] h-[3px] bg-[#00c1f5] bottom-0 left-[calc(50%-20px)]
+}
+
+.box-pricing h3 {
+    @apply text-[#00c1f5] text-lg font-jost font-medium mb-4
+}
+
+.box-pricing h4 {
+    @apply text-primary text-5xl font-jost mb-6
+}
+
+.box-pricing h4 span{
+    @apply text-secondary text-base block capitalize
+}
+
+.box-pricing.active{
+    @apply border-t-[3px] border-t-primary
+}
+
+.box-pricing button{
+    @apply py-3 px-9 border-[1px] border-primary rounded-[50px] capitalize font-medium font-jost text-primary transition-all duration-300 hover:bg-primary hover:text-white mobile:w-full
+}
+
+.box-pricing.active button{
+    @apply text-white bg-primary transition-all duration-300
+}
+
+.contact .info-contact {
+    box-shadow: 0px 2px 25px rgb(0 0 0 / 10%);
+}
+
+.info-contact .icon {
+    font-size: 20px;
+    color: #fff;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+}
+
+.contact .form-contact {
+    box-shadow: 0px 2px 25px rgb(0 0 0 / 10%);
+}
+
+.bg-resp {
+    background : rgba(0, 146, 187, 0.9)
+}
+
+.box-pricing {
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+    padding: 30px;
+    border-radius: 5px;
+    background: #fff;
+    transition: 0.5s;
+    height: 100%;
+}
+
+.box-pricing:hover {
+    transform: translateY(-10px);
 }
