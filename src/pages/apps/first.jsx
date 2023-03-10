@@ -1,8 +1,13 @@
 import React from 'react'
+import { One, Two } from '../../components'
 
 const First = () => {
+
     return (
-        <div>First</div>
+        <div className='container-fluid grid grid-cols-3'>
+            <One />
+            <Two />
+        </div>
     )
 }
 

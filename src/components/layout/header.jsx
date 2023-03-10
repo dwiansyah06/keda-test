@@ -67,8 +67,8 @@ const LayoutHeader = () => {
             </div>
 
             {/* LOGIN MODAL */}
-            <div className={`fixed w-full h-full flex justify-center items-center top-0 ${context.isShowLogin ? 'translate-y-0' : '-translate-y-full'} translate-y-0 transition-all ease-in-out duration-300 p-7 z-[52]`}>
-                <div className='flex flex-col w-4/6 mobile:w-11/12 h-max mobile:h-max tablet:h-max landscape-mobile:h-4/5 landscape-mobile:overflow-scroll space-y-2 rounded-xl relative'>
+            <div className={`fixed w-full h-full flex justify-center items-center top-0 ${context.isShowLogin ? 'translate-y-0' : '-translate-y-full'} transition-all ease-in-out duration-300 p-7 z-[52]`}>
+                <div className='flex flex-col w-4/6 mobile:w-11/12 h-max mobile:h-max tablet:h-max landscape-mobile:h-4/5 landscape-mobile:overflow-scroll no-scrollbar space-y-2 rounded-xl relative'>
                     <div className='grid grid-cols-2 mobile:grid-cols-1 landscape-mobile:grid-cols-1 tablet:grid-cols-1 static mobile:static landscape-mobile:static tablet:static w-full h-full'>
                         <div className='bg-primary mobile:hidden landscape-mobile:hidden tablet:hidden flex flex-col space-y-8 justify-center items-center rounded-l-[20px] p-4'>
                             <img src={process.env.PUBLIC_URL+"/undraw_secure_login_pdn4.svg"} className="w-1/2 medium-mobile:w-11/12 small-mobile:w-10/12 mobile:mb-12 tablet:mb-12 tablet:w-4/5 landscape-mobile:w-1/2"  alt="jumbo"/>

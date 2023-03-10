@@ -103,6 +103,16 @@
     @apply font-medium cursor-pointer
 }
 
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 .contact .info-contact {
     box-shadow: 0px 2px 25px rgb(0 0 0 / 10%);
 }

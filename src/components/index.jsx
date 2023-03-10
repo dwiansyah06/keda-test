@@ -5,6 +5,8 @@ import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import Footer from "./layout/footer";
 import Hero from "./pages/Hero";
+import One from "./apps/number-one/one";
+import Two from "./apps/number-one/Two";
 
 export {
     LayoutHeader,
@@ -13,5 +15,7 @@ export {
     Pricing,
     Contact,
     Footer,
-    Hero
+    Hero,
+    One,
+    Two
 }

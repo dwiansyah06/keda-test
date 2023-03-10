@@ -21,8 +21,9 @@ const MyRoutes = () => {
         <Routes>
             <Route path="/" element={<MainApp />}>
                 <Route index element={<AppsIndex />}/>
-                <Route path='first-question' element={<First />}/>
             </Route>
+
+            <Route path='first-question' element={<First />}/>
         </Routes>
     </BrowserRouter>
   )
