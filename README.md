@@ -3,4 +3,4 @@ TEKNOLOGI YANG DIGUNAKAN
 
 2. Reacticons, karena ini sangat lengkap dalam menangani icon baik bootstrap icon, tabler, dll hanya dengan sekali panggil
 
-3. Untuk melakukan test soal nomor silahkan akses localhost:3000/first-question
+3. Untuk melakukan test soal nomor satu silahkan akses localhost:3000/first-question
