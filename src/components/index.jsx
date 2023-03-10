@@ -7,6 +7,7 @@ import Footer from "./layout/footer";
 import Hero from "./pages/Hero";
 import One from "./apps/number-one/one";
 import Two from "./apps/number-one/Two";
+import Three from "./apps/number-one/Three";
 
 export {
     LayoutHeader,
@@ -17,5 +18,6 @@ export {
     Footer,
     Hero,
     One,
-    Two
+    Two,
+    Three
 }

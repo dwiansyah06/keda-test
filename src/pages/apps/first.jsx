@@ -1,5 +1,5 @@
 import React from 'react'
-import { One, Two } from '../../components'
+import { One, Three, Two } from '../../components'
 
 const First = () => {
 
@@ -7,6 +7,7 @@ const First = () => {
         <div className='container-fluid grid grid-cols-3'>
             <One />
             <Two />
+            <Three />
         </div>
     )
 }

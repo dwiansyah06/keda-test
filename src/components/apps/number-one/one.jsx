@@ -67,6 +67,7 @@ const One = () => {
 
     return (
         <div className='border-x-[1px] border-black h-[100vh] p-2'>
+            <h2 className='mb-6'>Soal nomor 1</h2>
             <div className='flex justify-between'>
                 <button className='px-3 py-2 bg-primary text-white text-sm rounded-md' onClick={handleAddClick}>Tambah Field</button>
             </div>

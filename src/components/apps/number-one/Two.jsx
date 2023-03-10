@@ -56,8 +56,15 @@ const Two = () => {
         }
 
         for (var i = 0; i < length; i++){
-            listRes.push(result[i])
-            value += result[i]
+            let number
+            if(result[i] == undefined) {
+                number = 0
+            } else {
+                number = result[i]
+            }
+
+            listRes.push(number)
+            value += number
         }
 
         setResult(`${listRes.toString().replace(/,/g, '+')} = ${value}`)
@@ -65,6 +72,7 @@ const Two = () => {
 
     return (
         <div className='border-x-[1px] border-black h-[100vh] p-2'>
+            <h2 className='mb-6'>Soal nomor 2</h2>
             <div className='flex justify-between'>
                 <button className='px-3 py-2 bg-primary text-white text-sm rounded-md' onClick={handleAddClick}>Tambah Field</button>
             </div>
