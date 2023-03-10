@@ -4,6 +4,7 @@ import AboutUs from "./pages/AboutUs";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import Footer from "./layout/footer";
+import Hero from "./pages/Hero";
 
 export {
     LayoutHeader,
@@ -11,5 +12,6 @@ export {
     AboutUs,
     Pricing,
     Contact,
-    Footer
+    Footer,
+    Hero
 }
