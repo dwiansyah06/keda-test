@@ -116,7 +116,7 @@ const Pricing = () => {
         <section className='container-fluid py-28 bg-[#f3f5fa]'>
             <TitleSection title='pricing' />
             <div className='content-section pricing'>
-                <div className='grid grid-cols-3 mobile:grid-cols-1 gap-8'>
+                <div className='grid grid-cols-3 mobile:grid-cols-1 tablet:grid-cols-1 gap-8'>
                     {
                         datas.map((data, index) => (
                             <PricingList key={index} data={data} />

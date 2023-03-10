@@ -28,7 +28,7 @@
 }
 
 .title-section h3{
-    @apply uppercase text-[32px] font-bold text-[#00c1f5] text-center relative pb-5 mb-16 font-jost
+    @apply uppercase text-[32px] font-bold text-primary text-center relative pb-5 mb-16 font-jost
 }
 
 .title-section h3::before{
@@ -36,11 +36,11 @@
 }
 
 .title-section h3::after{
-    @apply content-[''] absolute block w-[40px] h-[3px] bg-[#00c1f5] bottom-0 left-[calc(50%-20px)]
+    @apply content-[''] absolute block w-[40px] h-[3px] bg-primary bottom-0 left-[calc(50%-20px)]
 }
 
 .box-pricing h3 {
-    @apply text-[#00c1f5] text-lg font-jost font-medium mb-4
+    @apply text-primary text-lg font-jost font-medium mb-4
 }
 
 .box-pricing h4 {
@@ -61,6 +61,46 @@
 
 .box-pricing.active button{
     @apply text-white bg-primary transition-all duration-300
+}
+
+.box-pricing {
+    @apply tablet:mx-auto
+}
+
+.contact .form-contact {
+    @apply bg-white rounded-r-[10px] p-4 flex items-center mobile:rounded-r-none mobile:!rounded-b-[10px]
+}
+
+.form-contact input, .form-contact textarea {
+    @apply p-4 w-full border-[1px] border-[#ced4da] text-sm text-[#212529] font-light
+}
+
+.form-contact textarea {
+    @apply resize-none h-[150px]
+}
+
+.form-contact input[type=text]:focus {
+    @apply border-[1px] border-primary
+}
+
+.form-contact button{
+    @apply py-3 px-9 rounded-[50px] capitalize font-medium w-max text-primary border-[1px] border-primary transition-all duration-300 hover:bg-primary hover:text-white mobile:w-full font-jost
+}
+
+.contact .info-contact {
+    @apply bg-primary rounded-l-[10px] mobile:rounded-l-none mobile:!rounded-t-[10px] p-4 flex items-center
+}
+
+.footer {
+    @apply py-8 bg-primary flex justify-between mobile:flex-col mobile:items-center
+}
+
+.footer .copyright, .footer .designed {
+    @apply text-white text-sm font-jost
+}
+
+.footer .copyright span, .footer .designed span  {
+    @apply font-medium cursor-pointer
 }
 
 .contact .info-contact {

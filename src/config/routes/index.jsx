@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes, Outlet } from 'react-router-dom'
 import { AppsIndex, First } from '../../pages'; 
-import { LayoutHeader } from '../../components'
+import { LayoutHeader, Footer } from '../../components'
 import PagesProvider from '../context/pagesContext';
 
 const MyRoutes = () => {
@@ -11,6 +11,7 @@ const MyRoutes = () => {
             <PagesProvider>
                 <LayoutHeader />
                     <Outlet />
+                <Footer />
             </PagesProvider>
         </>
     );

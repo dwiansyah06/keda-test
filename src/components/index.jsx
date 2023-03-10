@@ -3,6 +3,7 @@ import TitleSection from "./apps/TitleSection";
 import AboutUs from "./pages/AboutUs";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
+import Footer from "./layout/footer";
 
 export {
     LayoutHeader,
@@ -10,4 +11,5 @@ export {
     AboutUs,
     Pricing,
     Contact,
+    Footer
 }

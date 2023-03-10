@@ -9,21 +9,24 @@ const PricingList = ({data}) => {
                 <sup>$</sup>{data.price}
                 <span>per month</span>
             </h4>
-            <ul className='mb-6 space-y-2'>
-                {
-                    data.list.map((list, index) => (
-                        <li key={index} className={`flex space-x-1 ${list.active ? 'text-secondary' : 'text-[#ccc]'}`}>
-                            {
-                                list.active
-                                ?   <IoCheckmarkOutline className='text-xl '/>
-                                :   <IoCloseOutline className='text-xl'/>
-                            }
-                            
-                            <label className={` ${list.active ? '' : 'line-through'}`}>{list.title}</label> 
-                        </li>
-                    ))
-                }
-            </ul>
+            <table className='w-full mb-6'>
+                <tbody>
+                    {
+                        data.list.map((list, index) => (
+                            <tr key={index} className={`${list.active ? 'text-secondary' : 'text-[#ccc]'}`}>
+                                <td className={`w-[8%] mobile:w-[10%] align-top`}>
+                                    {
+                                        list.active
+                                        ?   <IoCheckmarkOutline className='text-xl '/>
+                                        :   <IoCloseOutline className='text-xl'/>
+                                    }
+                                </td>
+                                <td><label className={` ${list.active ? '' : 'line-through'}`}>{list.title}</label> </td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
             <button>get started</button>
         </div>
     )
